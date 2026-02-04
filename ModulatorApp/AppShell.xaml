@@ -16,7 +16,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Modulators" Route="modulators">
-        <ShellContent ContentTemplate="{DataTemplate local:Modulators}" />
+        <ShellContent ContentTemplate="{DataTemplate local:ModulatorsPage}" />
     </FlyoutItem>
 
     <ShellContent

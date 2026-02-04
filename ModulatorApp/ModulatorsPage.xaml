@@ -1,0 +1,16 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ModulatorApp.ModulatorsPage"
+    Title="Modulators">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+
+        <Button Text="Kalydeco (ivacaftor)" Clicked="OnModulatorClicked" />
+        <Button Text="Orkambi (lumacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
+        <Button Text="Symdeko (tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
+        <Button Text="Trikafta (elexacaftor/tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
+        <Button Text="Alyftrek (vanzacaftor/tezacaftor/deutivacaftor)" Clicked="OnModulatorClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

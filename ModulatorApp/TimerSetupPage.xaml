@@ -1,0 +1,20 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ModulatorApp.TimerSetupPage"
+    Title="Set Timer">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+        <Label Text="{Binding Medication}" FontSize="20" FontAttributes="Bold"/>
+
+        <Label Text="Dose time 1" />
+        <TimePicker Time="{Binding Time1}" />
+
+        <Label Text="Dose time 2 (optional)" />
+        <TimePicker Time="{Binding Time2}" />
+
+        <Button Text="Save to Home" Clicked="OnSaveClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

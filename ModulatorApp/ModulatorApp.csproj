@@ -65,13 +65,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Modulators.xaml.cs">
-	    <DependentUpon>Modulators.xaml</DependentUpon>
+	  <Compile Update="TimerSetupPage.xaml.cs">
+	    <DependentUpon>TimerSetupPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ModulatorsPage.xaml.cs">
+	    <DependentUpon>ModulatorsPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Modulators.xaml">
+	  <MauiXaml Update="TimerSetupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ModulatorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

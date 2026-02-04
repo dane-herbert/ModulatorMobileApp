@@ -5,6 +5,11 @@
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute("home", typeof(MainPage));
+            Routing.RegisterRoute("modulatorspage", typeof(ModulatorsPage));
+            Routing.RegisterRoute(nameof(TimerSetupPage), typeof(TimerSetupPage));
+
         }
     }
 }
