@@ -5,7 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="30,20"
             Spacing="25">
             
             <Image
@@ -20,40 +20,45 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="The Cystic Fibrosis Modulator Helper Application!"
+                Text="The CFTR Modulator Timer and Reminder Application!"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to the Cystic Fibrosis Modulator Helper Application" />
+            
+            <VerticalStackLayout
+                Padding="0, 25"
+                Spacing="25">
+                
+                <Frame
+                    Padding="30"
+                    CornerRadius="12"
+                    BackgroundColor="LightGray"
+                    HasShadow="True">
 
-            <Frame
-                Padding="22"
-                CornerRadius="12"
-                BackgroundColor="LightGray"
-                HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
 
-                <VerticalStackLayout Spacing="10">
+                        <Label
+                            Text="Add Modulator"
+                            FontSize="22"
+                            TextColor="Black"
+                            Opacity="0.6"
+                            HorizontalTextAlignment="Center"/>
 
-                    <Label
-                        Text="Add Modulator"
-                        FontSize="22"
-                        TextColor="Black"
-                        Opacity="0.6"
-                        HorizontalTextAlignment="Center"/>
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                            <Button
+                                Text="+"
+                                FontSize="24"
+                                BackgroundColor="#FE7F27"
+                                Grid.Column="0" />
 
-                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
-                        <Button
-                            Text="+"
-                            FontSize="24"
-                            BackgroundColor="#FE7F27"
-                            Grid.Column="0" />
-
-                        <!--<Switch
-                            Grid.Column="1" />-->
-                    </Grid>
+                            <!--<Switch
+                                Grid.Column="1" />-->
+                        </Grid>
 
 
-                </VerticalStackLayout>
-            </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>
