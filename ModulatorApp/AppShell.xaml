@@ -6,9 +6,18 @@
     xmlns:local="clr-namespace:ModulatorApp"
     Title="ModulatorApp"
     Shell.NavBarIsVisible="True"
-    Shell.BackgroundColor="#121212"
-    Shell.ForegroundColor="White"
-    Shell.TitleColor="White">
+    Shell.BackgroundColor="White"
+    Shell.ForegroundColor="Black"
+    Shell.TitleColor="#FE7F27"
+    FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Home" Route="home">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Modulators" Route="modulators">
+        <ShellContent ContentTemplate="{DataTemplate local:Modulators}" />
+    </FlyoutItem>
 
     <ShellContent
         Title="Home"
