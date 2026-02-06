@@ -6,15 +6,13 @@ public partial class ModulatorsPage : ContentPage
     {
         InitializeComponent();
     }
-
     private async void OnModulatorClicked(object sender, EventArgs e)
     {
         if (sender is Button btn)
         {
-            var medication = btn.Text;
-            await Navigation.PushAsync(new TimerSetupPage(medication));
-            // If you prefer Shell routes instead:
-            // await Shell.Current.GoToAsync($"{nameof(TimerSetupPage)}?med={Uri.EscapeDataString(medication)}");
+            var medication = (btn.CommandParameter ?? btn.Text)?.ToString() ?? string.Empty;
+            await Shell.Current.GoToAsync($"{nameof(TimerSetupPage)}?med={Uri.EscapeDataString(medication)}");
+
         }
     }
 }

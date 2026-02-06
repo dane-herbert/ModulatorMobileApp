@@ -8,11 +8,51 @@
 
         <Label Text="{Binding Medication}" FontSize="20" FontAttributes="Bold"/>
 
-        <Label Text="Dose time 1" />
-        <TimePicker Time="{Binding Time1}" />
-
-        <Label Text="Dose time 2 (optional)" />
-        <TimePicker Time="{Binding Time2}" />
+        <!-- Alyftrek is only taken once a day, so we will hide the evening dose fields if Alyftrek is selected-->
+        <Label Text="Daily Dose" IsVisible="False">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="True" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <TimePicker Time="{Binding Time1}" IsVisible="False">
+            <TimePicker.Triggers>
+                <DataTrigger TargetType="TimePicker" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="True" />
+                </DataTrigger>
+            </TimePicker.Triggers>
+        </TimePicker>
+        
+        <!-- The morning dose is always visible, but if Alyftrek is selected, the evening dose fields will be hidden-->
+        <Label Text="Morning Dose" IsVisible="True">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <TimePicker Time="{Binding Time1}" IsVisible="True">
+            <TimePicker.Triggers>
+                <DataTrigger TargetType="TimePicker" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </TimePicker.Triggers>
+        </TimePicker>
+        <Label Text="Evening Dose" IsVisible="True">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <TimePicker Time="{Binding Time2}" IsVisible="True">
+            <TimePicker.Triggers>
+                <DataTrigger TargetType="TimePicker" Binding="{Binding Medication}" Value="Alyftrek">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </TimePicker.Triggers>
+        </TimePicker>
 
         <Button Text="Save to Home" Clicked="OnSaveClicked"/>
 

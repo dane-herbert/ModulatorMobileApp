@@ -6,11 +6,11 @@
 
     <VerticalStackLayout Padding="16" Spacing="10">
 
-        <Button Text="Kalydeco (ivacaftor)" Clicked="OnModulatorClicked" />
-        <Button Text="Orkambi (lumacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
-        <Button Text="Symdeko (tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
-        <Button Text="Trikafta (elexacaftor/tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" />
-        <Button Text="Alyftrek (vanzacaftor/tezacaftor/deutivacaftor)" Clicked="OnModulatorClicked" />
+        <Button Text="Kalydeco (ivacaftor)" Clicked="OnModulatorClicked" CommandParameter="Kalydeco"/>
+        <Button Text="Orkambi (lumacaftor/ivacaftor)" Clicked="OnModulatorClicked" CommandParameter="Orkambi" />
+        <Button Text="Symdeko (tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" CommandParameter="Symbeko"/>
+        <Button Text="Trikafta (elexacaftor/tezacaftor/ivacaftor)" Clicked="OnModulatorClicked" CommandParameter="Trikafta"/>
+        <Button Text="Alyftrek (vanzacaftor/tezacaftor/deutivacaftor)" Clicked="OnModulatorClicked" CommandParameter="Alyftrek"/>
 
     </VerticalStackLayout>
 </ContentPage>

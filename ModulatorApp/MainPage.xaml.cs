@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
     private async void OnAddModulatorClicked(object sender, EventArgs e)
     {
         // Navigate to your modulators page or timer setup flow
-        await Shell.Current.GoToAsync("modulatorspage");
+        await Shell.Current.GoToAsync("//modulators");
     }
 }
 

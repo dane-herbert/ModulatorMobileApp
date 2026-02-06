@@ -11,17 +11,15 @@
     Shell.TitleColor="#FE7F27"
     FlyoutBehavior="Flyout">
 
-    <FlyoutItem Title="Home" Route="home">
-        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Modulators" Route="modulators">
-        <ShellContent ContentTemplate="{DataTemplate local:ModulatorsPage}" />
-    </FlyoutItem>
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    
+    <ShellContent
+        Title="Modulators"
+        ContentTemplate="{DataTemplate local:ModulatorsPage}"
+        Route="modulators" />
+
 
 </Shell>
