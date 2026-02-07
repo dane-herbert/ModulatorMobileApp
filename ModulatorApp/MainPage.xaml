@@ -18,7 +18,7 @@
         VerticalOptions="FillAndExpand">
 
         <CollectionView.Header>
-            <VerticalStackLayout Padding="30,20" Spacing="18">
+            <VerticalStackLayout Padding="30,50" Spacing="18">
 
                 <Image
                     Source="dosehelper.png"
@@ -38,11 +38,11 @@
                     SemanticProperties.HeadingLevel="Level2"
                     HorizontalTextAlignment="Center" />
 
-                <Frame
+                <Border
                     Padding="22"
-                    CornerRadius="12"
+                    StrokeShape="RoundRectangle 12"
                     BackgroundColor="LightGray"
-                    HasShadow="True"
+                    Margin="0,50,0,0"
                     IsVisible="{Binding Cards.Count, Converter={StaticResource IntGtZero}, ConverterParameter=invert}">
 
                     <VerticalStackLayout Spacing="10">
@@ -54,28 +54,24 @@
                             Opacity="0.6"
                             HorizontalTextAlignment="Center" />
 
-                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
-                            <Button
+                        <Button
                                 Text="+"
                                 FontSize="24"
                                 BackgroundColor="#FE7F27"
-                                Clicked="OnAddModulatorClicked"
-                                Grid.Column="0" />
-                        </Grid>
+                                Clicked="OnAddModulatorClicked" />
 
                     </VerticalStackLayout>
-                </Frame>
+                </Border>
 
             </VerticalStackLayout>
         </CollectionView.Header>
 
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame
+                <Border
                     Padding="14"
-                    CornerRadius="12"
+                    StrokeShape="RoundRectangle 12"
                     Margin="30,0,30,10"
-                    HasShadow="True"
                     BackgroundColor="#F2F2F2">
 
                     <VerticalStackLayout Spacing="6">
@@ -84,7 +80,7 @@
                         <Label Text="{Binding Time2, StringFormat='Dose 2: {0:hh\\:mm}', TargetNullValue=''}" />
                     </VerticalStackLayout>
 
-                </Frame>
+                </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
 

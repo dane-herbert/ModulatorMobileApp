@@ -28,7 +28,7 @@ public partial class TimerSetupPage : ContentPage
             Time2 = _vm.Time2Enabled ? _vm.Time2 : null
         });
 
-        await Shell.Current.GoToAsync("home");
+        await Shell.Current.GoToAsync("//home");
     }
 
     // This property is set by Shell when navigating with a query parameter (e.g. ?med=Trikafta)
