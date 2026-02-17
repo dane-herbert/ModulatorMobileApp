@@ -69,20 +69,48 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border
-                    Padding="14"
-                    StrokeShape="RoundRectangle 12"
-                    Margin="30,0,30,10"
-                    BackgroundColor="#F2F2F2">
+            Padding="14"
+            StrokeShape="RoundRectangle 12"
+            Margin="30,0,30,10"
+            BackgroundColor="#F2F2F2">
 
-                    <VerticalStackLayout Spacing="6">
-                        <Label Text="{Binding Medication}" FontSize="18" FontAttributes="Bold" />
-                        <Label Text="{Binding Time1, StringFormat='Dose 1: {0:hh\\:mm}'}" />
-                        <Label Text="{Binding Time2, StringFormat='Dose 2: {0:hh\\:mm}', TargetNullValue=''}" />
+                    <VerticalStackLayout Spacing="10">
+
+                        <Grid ColumnDefinitions="50,40"
+                              RowDefinitions="35,0"
+                                HorizontalOptions="End"
+                                ColumnSpacing="4">
+                            
+                            <Button
+                                Text="Edit"
+                                Grid.Column="0"
+                                Padding="12,8"
+                                CornerRadius="10"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type CollectionView}}, Path=BindingContext.EditMedicationCommand}"
+                                CommandParameter="{Binding .}" />
+
+                            <Button
+                                Text="X"
+                                Grid.Column="1"
+                                Padding="12,8"
+                                CornerRadius="10"
+                                BackgroundColor="OrangeRed"
+                                TextColor="White"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type CollectionView}}, Path=BindingContext.DeleteMedicationCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Grid>
+
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="{Binding Medication}" FontSize="26" FontAttributes="Bold" />
+                            <Label Text="{Binding Time1, StringFormat='Dose 1: {0:hh\\:mm}'}" />
+                            <Label Text="{Binding Time2, StringFormat='Dose 2: {0:hh\\:mm}', TargetNullValue=''}" />
+                        </VerticalStackLayout>
+                        
                     </VerticalStackLayout>
-
                 </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
+
 
     </CollectionView>
 
